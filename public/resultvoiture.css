@@ -1,0 +1,37 @@
+body {
+    background-color: #f8f9fa; /* Light background for better contrast */
+    color: #333; /* Dark text color for readability */
+}
+
+.container {
+    margin-top: 20px; /* Spacing from the top */
+}
+
+.card {
+    border: 1px solid #dee2e6; /* Light border */
+    border-radius: 0.5rem; /* Rounded corners */
+    transition: transform 0.2s; /* Scale effect on hover */
+    background-color: white; /* Card background */
+    height: 300px; /* Fixed height for cards */
+}
+
+.small-card {
+    height: auto; /* Let the card height adjust based on content */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.card-title {
+    font-size: 1.2rem; /* Adjust title font size */
+    margin-bottom: 0.5rem; /* Space below title */
+}
+
+.card-text {
+    margin-bottom: 0.5rem; /* Space between text elements */
+}
+
+.btn {
+    margin-top: 10px; /* Space above buttons */
+}

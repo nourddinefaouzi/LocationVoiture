@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+.alert {
+    padding: 15px;
+    background-color: #d4edda; /* Light green background */
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.alert-success {
+    background-color: #d4edda; /* Success color background */
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da; /* Light red background */
+    border: 1px solid #f5c6cb; /* Red border */
+    color: #721c24; /* Dark red text */
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.car-management {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.car-management h2 {
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.ajout-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.ajout-btn:hover {
+    background-color: #2980b9;
+}
+
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.styled-table th, 
+.styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table th {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn-show, .btn-update, .btn-delete {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-show {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-update {
+    background-color: #f39c12;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-show:hover, .btn-update:hover, .btn-delete:hover {
+    opacity: 0.8;
+}

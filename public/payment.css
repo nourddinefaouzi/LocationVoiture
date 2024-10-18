@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.logout-form {
+    text-align: right;
+}
+
+.logout-button {
+    background-color: #d9534f; /* Bootstrap danger color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #c9302c; /* Darker shade for hover effect */
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.submit-button {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* Darker green for hover effect */
+}
