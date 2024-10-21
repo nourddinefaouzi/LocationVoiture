@@ -1,5 +1,5 @@
 {
   "build": {
-    "phpVersion": "8.1"
+    "builder": "heroku/buildpacks:20"
   }
 }
