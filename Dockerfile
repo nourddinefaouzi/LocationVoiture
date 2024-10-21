@@ -1,36 +1,36 @@
+# Use an official PHP runtime as a parent image
 FROM php:8.1-fpm
+
+# Set working directory
+WORKDIR /var/www
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
+    libjpeg-dev \
     libpng-dev \
-    libjpeg62-turbo-dev \
     libfreetype6-dev \
-    zip \
     libzip-dev \
+    zip \
     unzip \
     git \
-    curl \
-    nginx
+    curl
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd zip
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd zip
 
-# Set working directory
-WORKDIR /var/www
-
-# Install composer
+# Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Copy project files
-COPY . .
+# Copy existing application directory contents
+COPY . /var/www
 
-# Install dependencies
-RUN composer install --optimize-autoloader --no-dev
+# Copy existing application directory permissions
+RUN chown -R www-data:www-data /var/www
 
-# Start PHP-FPM server
-CMD ["php-fpm"]
-
+# Expose port 9000 and start php-fpm server
 EXPOSE 9000
+CMD ["php-fpm"]
